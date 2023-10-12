@@ -159,7 +159,7 @@ gap: 40px;
   margin-left: 30px;
 }
 
-.frame-14 {
+.frame14 {
   background-color: #03A262;
   padding: 160px 250px 160px 100px;
   justify-content: center;
@@ -171,7 +171,7 @@ gap: 40px;
 }
 
 .frame16 h2 {
-  color: var(--white, #FFF);
+  color: black;
 font-family: Kollektif;
 font-size: 40px;
 font-style: normal;
