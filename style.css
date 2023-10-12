@@ -1,0 +1,36 @@
+.btn-flat {
+  margin: 10px 60px;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #DF0B36;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #ff0033;
+  color: white;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 696px;
+}
+
+.banner h1 {
+  margin: 10px 60px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  margin: 10px 60px;
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
