@@ -142,7 +142,6 @@ gap: 40px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.8px;
-  /* margin-bottom: 40px; */
 }
 
 .frame10-inside {
@@ -158,4 +157,25 @@ gap: 40px;
 
 .frame10-inside li {
   margin-left: 30px;
+}
+
+.frame14 {
+  background-color: #03A262;
+  padding: 160px 250px 160px 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame16 {
+  width: 930px;
+}
+
+.frame16 h2 {
+  color: black;
+font-family: Kollektif;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.8px;
 }
