@@ -125,11 +125,8 @@
   display: flex;
   padding: 160px 100px;
   align-items: center;
-
-
-flex-direction: column;
-
-gap: 40px;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .frame10 h1 {
@@ -200,13 +197,14 @@ margin-bottom: 40px;
   width: 705px;
   padding: 19px 43px 19px 40px;
   align-items: center;
-  gap: -100px;
   background-color: white;
   justify-content: space-between;
+  gap: 34px;
 }
 
 .dropdowna a {
   color: black;
+  gap: 34px;
 }
 
 .frame11 {
@@ -214,7 +212,6 @@ margin-bottom: 40px;
 }
 
 .banner2 {
-
   padding: 160px 0px 160px 100px;
   /* gap: 10px; */
 }
@@ -258,7 +255,6 @@ margin-bottom: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
-  margin-bottom: 40px;
 }
 
 .bannerimg {
@@ -269,7 +265,6 @@ margin-bottom: 40px;
 }
 
 .buttonbanner2 {
-  margin-top: 200px;
   background-color: #DF0B36;
   display: inline-flex;
   padding: 19px 43px 19px 40px;
@@ -279,7 +274,7 @@ margin-bottom: 40px;
 }
 
 .buttonbanner2 p {
-color: #000000;
+color: #ffffff;
 font-family: Kollektif;
 font-size: 25px;
 font-style: normal;
@@ -289,5 +284,5 @@ letter-spacing: -0.375px;
 }
 
 .buttonbanner2 a {
-  color: black;
+  color: rgb(255, 255, 255);
 }
