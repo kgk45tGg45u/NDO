@@ -94,6 +94,9 @@
   background-position: center;
   padding: 150px 0;
   height: 696px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .banner h1 {
@@ -169,13 +172,13 @@
 
 .frame16 h2 {
   color: rgb(255, 255, 255);
-font-family: Kollektif;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -0.8px;
-margin-bottom: 40px;
+  font-family: Kollektif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin-bottom: 40px;
 }
 
 .frame16 p {
@@ -223,10 +226,8 @@ margin-bottom: 40px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   margin-top: 1px;
-  /* display: inline-flex; */
   background-color: #F0F0F0;
   box-shadow: 0px 0px 4px 0px rgba(15, 15, 15, 0.2);
-  /* flex-direction: column; */
   justify-self: center;
   align-self: center;
   color: #000000;
@@ -236,9 +237,7 @@ margin-bottom: 40px;
   font-weight: 400;
   line-height: 150%; /* 30px */
   width: 705px;
-  /* padding: 0px 44px; */
   justify-content: center;
-  /* align-items: center; */
   gap: 10px;
 }
 
@@ -315,13 +314,13 @@ margin-bottom: 40px;
 }
 
 .buttonbanner2 p {
-color: #ffffff;
-font-family: Kollektif;
-font-size: 25px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -0.375px;
+  color: #ffffff;
+  font-family: Kollektif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.375px;
 }
 
 .buttonbanner2 a {
