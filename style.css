@@ -256,10 +256,25 @@
   /* gap: 10px; */
 }
 
+.banner2buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner2buttons {
+  width: 100%;
+}
+
 .banner3 {
   display: flex;
   justify-content: space-between;
 }
+
+.group22 {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .banner2 h1 {
   font-family: Kollektif;
