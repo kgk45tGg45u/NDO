@@ -162,6 +162,19 @@ letter-spacing: 0.125px;
   background-color: var(--blue);
 }
 
+#p .btn-red {
+  background-color: #DF0B36;
+  display: inline-flex;
+  color: var(--white);
+  padding: 19px 43px 19px 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 21px;
+}
+
+#p .vlist > * {
+  display: block;
+}
 
 @font-face {
   font-family: 'Kollektif';
