@@ -63,7 +63,7 @@
 }
 
 #p h2, #p .h2 {
-  text-align: center;
+  /* text-align: center; */
   font-family: Kollektif;
   font-size: var(--font-m);
   font-style: normal;
@@ -117,6 +117,11 @@ letter-spacing: 0.125px;
   margin: auto;
 }
 
+#p .section.wide {
+  width: 58.125rem;
+  margin: auto;
+}
+
 #p .mbl{
   margin-bottom: var(--spc-l);
 }
@@ -130,8 +135,6 @@ letter-spacing: 0.125px;
   margin-bottom: var(--spc-xl);
 }
 
-
-
 #p .btn-flat{
   margin: var(--spc-s) calc(6 * var(--spc-s));
   color: white;
@@ -140,6 +143,7 @@ letter-spacing: 0.125px;
   background: #DF0B36;
   transition: background 0.3s ease;
 }
+
 
 @font-face {
   font-family: 'Kollektif';
