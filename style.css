@@ -72,6 +72,10 @@
   letter-spacing: -0.8px;
 }
 
+#p .green-bg h2 {
+  color: var(--blue);
+}
+
 #p h2.light #p .h2.light{
   font-weight: 400;
 }
@@ -104,8 +108,12 @@ line-height: 150%; /* 37.5px */
 letter-spacing: 0.125px;
 }
 
-#p .bold{
+#p b{
   font-weight: 700;
+}
+
+#p .green-bg b {
+  color: var(--blue);
 }
 
 #p .section{
@@ -118,8 +126,12 @@ letter-spacing: 0.125px;
 }
 
 #p .section.wide {
-  width: 58.125rem;
-  margin: auto;
+  box-shadow: 0 0 0 100vmax var(--green);
+  clip-path: inset(0 -100vmax);
+}
+
+#p .section.left .section-content {
+  max-width: 47.611rem;
 }
 
 #p .mbl{
@@ -142,6 +154,12 @@ letter-spacing: 0.125px;
   border-radius: 4px;
   background: #DF0B36;
   transition: background 0.3s ease;
+}
+
+#p .btn-blue {
+  color: var(--white);
+  padding: var(--spc-s) var(--spc-l);
+  background-color: var(--blue);
 }
 
 
