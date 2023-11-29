@@ -7,10 +7,12 @@
   --spc-l: calc(2 * var(--spc-m));
   --spc-xl: calc(2 * var(--spc-l));
   --spc-xxl: calc(2 * var(--spc-xl));
-  --font-xs: calc(2 * 0.556rem);
-  --font-s: calc(2.5 * 0.556rem);
-  --font-m: calc(4 * 0.556rem);
-  --font-l: calc(6 * 0.556rem);
+
+
+  --font-xs: clamp(0.7rem, 0.7vw + 0.6rem, 1.11rem);
+  --font-s: clamp(1rem, 0.7vw + 0.9rem, 1.389rem);
+  --font-m: clamp(1.5rem, 1.2vw + 1.2rem, 2.22rem);
+  --font-l: clamp(2rem, 2.2vw + 1.5rem, 3.333rem);
 
   --red: #DF0B36;
   --green: #03A262;
@@ -24,37 +26,6 @@
   font-smooth: never;
 }
 
-#p .red{
-  color: var(--red);
-}
-
-#p .red-bg{
-  background-color: var(--red);
-}
-#p .green{
-  color: var(--green);
-}
-
-#p .green-bg{
-  background-color: var(--green);
-}
-
-#p .white {
-  color: var(--white);
-}
-
-#p .gray-bg {
-  background-color: var(--gray);
-}
-
-#p .blue{
-  color: var(--blue);
-}
-
-#p .center{
-  text-align: center;
-}
-
 #p h1, #p .h1 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Kollektif;
@@ -65,16 +36,14 @@
   letter-spacing: -1.8px;
 }
 
-#p {
-    h2, .h2 {
-      /* text-align: center; */
-      font-family: Kollektif;
-      font-size: var(--font-m);
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: -0.8px;
-  }
+#p h2, #p .h2 {
+    /* text-align: center; */
+    font-family: Kollektif;
+    font-size: var(--font-m);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
 }
 
 #p .green-bg h2 {
@@ -112,6 +81,39 @@ font-weight: 400;
 line-height: 150%; /* 37.5px */
 letter-spacing: 0.125px;
 }
+
+#p .red{
+  color: var(--red);
+}
+
+#p .red-bg{
+  background-color: var(--red);
+}
+#p .green{
+  color: var(--green);
+}
+
+#p .green-bg{
+  background-color: var(--green);
+}
+
+#p .white {
+  color: var(--white);
+}
+
+#p .gray-bg {
+  background-color: var(--gray);
+}
+
+#p .blue{
+  color: var(--blue);
+}
+
+#p .center{
+  text-align: center;
+}
+
+
 
 #p b{
   font-weight: 700;
@@ -167,20 +169,17 @@ letter-spacing: 0.125px;
   background-color: var(--blue);
 }
 
-#p .btn-red {
-  background-color: #DF0B36;
-  display: inline-flex;
-  color: var(--white);
-  align-items: center;
-  justify-content: space-between;
-  gap: 21px;
-
+#p .btn-arrow {
   background-image: url("data:image/svg+xml,%3Csvg width='44' height='30' viewBox='0 0 44 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 27.1104L41 15.0701M41 15.0701L29 3.11035M41 15.0701L2 15.0701' stroke='white' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat no-repeat;
   background-position: calc(100% - var(--spc-l)) center;
-  padding: var(--spc-m) var(--spc-l);
   padding-right: calc( var(--spc-l) + 24px + var(--spc-l) );
+}
 
+#p .btn-red {
+  background-color: #DF0B36;
+  color: var(--white);
+  padding: var(--spc-m) var(--spc-l);
 }
 
 .ladies {
@@ -290,17 +289,6 @@ letter-spacing: 0.125px;
   margin-right: calc(50% - 50vw);
 }
 
-.banner h1 {
-  font-family: Kollektif;
-  margin: 10px 60px;
-  color: #FFF;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -1.8px;
-}
 
 .banner p {
   width: 661px;
