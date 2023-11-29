@@ -1,6 +1,9 @@
 #p {
+  /* 10 */
   --spc-s: 0.556rem;
+/* 20 */
   --spc-m: calc(2 * var(--spc-s));
+/* 40 */
   --spc-l: calc(2 * var(--spc-m));
   --spc-xl: calc(2 * var(--spc-l));
   --spc-xxl: calc(2 * var(--spc-xl));
@@ -82,7 +85,7 @@
   font-weight: 400;
 }
 
-#p h3, #p .h1 {
+#p h3, #p .h3 {
   /* H3 */
   font-family: Kollektif;
   font-size: var(--font-s);
@@ -122,7 +125,7 @@ letter-spacing: 0.125px;
   padding-block: var(--spc-xxl);
 }
 
-#p .section.narrow{
+#p .narrow{
   max-width: 44.167rem;
   margin: auto;
 }
@@ -168,14 +171,22 @@ letter-spacing: 0.125px;
   background-color: #DF0B36;
   display: inline-flex;
   color: var(--white);
-  padding: 19px 43px 19px 40px;
   align-items: center;
   justify-content: space-between;
   gap: 21px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='30' viewBox='0 0 44 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 27.1104L41 15.0701M41 15.0701L29 3.11035M41 15.0701L2 15.0701' stroke='white' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat no-repeat;
+  background-position: calc(100% - var(--spc-l)) center;
+  padding: var(--spc-m) var(--spc-l);
+  padding-right: calc( var(--spc-l) + 24px + var(--spc-l) );
+
 }
 
-#p .vlist > * {
-  display: block;
+.ladies {
+  background-image: url("images/ladies.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 @font-face {
