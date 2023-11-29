@@ -62,14 +62,16 @@
   letter-spacing: -1.8px;
 }
 
-#p h2, #p .h2 {
-  /* text-align: center; */
-  font-family: Kollektif;
-  font-size: var(--font-m);
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
+#p {
+    h2, .h2 {
+      /* text-align: center; */
+      font-family: Kollektif;
+      font-size: var(--font-m);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.8px;
+  }
 }
 
 #p .green-bg h2 {
