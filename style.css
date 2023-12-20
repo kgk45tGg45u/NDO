@@ -153,12 +153,15 @@ letter-spacing: 0.125px;
 #p .mbxl{
   margin-bottom: var(--spc-xl);
 }
+#p [class^="btn-"] {
+  display: inline-block;
+}
 
 #p .btn-flat{
   margin: var(--spc-s) calc(6 * var(--spc-s));
   color: white;
   padding: var(--spc-s);
-  border-radius: 4px;
+  border-radius: 0;
   background: #DF0B36;
   transition: background 0.3s ease;
 }
@@ -169,7 +172,7 @@ letter-spacing: 0.125px;
   background-color: var(--blue);
 }
 
-#p .btn-arrow {
+#p .btn-arrow, #p .btn-red.btn-arrow {
   background-image: url("data:image/svg+xml,%3Csvg width='44' height='30' viewBox='0 0 44 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 27.1104L41 15.0701M41 15.0701L29 3.11035M41 15.0701L2 15.0701' stroke='white' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat no-repeat;
   background-position: calc(100% - var(--spc-l)) center;
@@ -182,6 +185,9 @@ letter-spacing: 0.125px;
   padding: var(--spc-m) var(--spc-l);
 }
 
+#p .btn-red.btn-arrow {
+  /*padding-right:*/
+}
 .ladies {
   background-image: url("images/ladies.png");
   background-position: right bottom;
