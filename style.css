@@ -26,6 +26,14 @@
   font-smooth: never;
 }
 
+#p .xs {
+  font-size: var(--font-xs);
+}
+
+#p .black {
+  color: black;
+}
+
 #p h1, #p .h1 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Kollektif;
@@ -186,6 +194,27 @@ letter-spacing: 0.125px;
   background-image: url("images/ladies.png");
   background-position: right bottom;
   background-repeat: no-repeat;
+}
+
+  [class^='col'].custom-gutter,
+  [class*=' col'].custom-gutter {
+  /* padding-left: 0px; */
+  padding-right: 70px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#p .image-square img {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.card-plus {
+  padding: 20px;
 }
 
 @font-face {
