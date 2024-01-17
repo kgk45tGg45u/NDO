@@ -161,6 +161,18 @@ letter-spacing: 0.125px;
 #p .mbxl{
   margin-bottom: var(--spc-xl);
 }
+
+#p {
+  .ptxxl {
+    padding-top: var(--spc-xxl);
+  }
+  .ptxl {
+    padding-top: var(--spc-xl);
+  }
+  .pbxl {
+    padding-bottom: var(--spc-xl);
+  }
+}
 #p [class^="btn-"] {
   display: inline-block;
 }
@@ -317,8 +329,6 @@ letter-spacing: 0.125px;
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  height: 696px;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -591,4 +601,16 @@ letter-spacing: 0.125px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+
+
+
+
+
+
+
+.hero {
+  display: flex;
+  align-items: end;
 }
