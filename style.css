@@ -4,9 +4,9 @@
 /* 20 */
   --spc-m: calc(2 * var(--spc-s));
 /* 40 */
-  --spc-l: calc(2 * var(--spc-m));
-  --spc-xl: calc(2 * var(--spc-l));
-  --spc-xxl: calc(2 * var(--spc-xl));
+  --spc-l: clamp(1rem, min(5vw, 5vh), calc(2 * var(--spc-m)));
+  --spc-xl: clamp(2rem, min(5vw, 5vh), calc(2 * var(--spc-l)));
+  --spc-xxl: clamp(3rem, min(10vw, 10vh), calc(2 * var(--spc-xl)));
 
 
   --font-xs: clamp(0.7rem, 0.7vw + 0.6rem, 1.11rem);
@@ -164,13 +164,14 @@ letter-spacing: 0.125px;
 
 #p {
   .ptxxl {
-    padding-top: var(--spc-xxl);
+    padding-top: clamp(4rem, min(20vh, 20vw), var(--spc-xxl));
   }
   .ptxl {
-    padding-top: var(--spc-xl);
+    padding-top: clamp(2rem, 10vh, var(--spc-xl));
   }
   .pbxl {
-    padding-bottom: var(--spc-xl);
+    padding-bottom: clamp(1rem, 10vh, var(--spc-xl));
+
   }
 }
 #p [class^="btn-"] {
@@ -613,4 +614,5 @@ letter-spacing: 0.125px;
 .hero {
   display: flex;
   align-items: end;
+  min-height: 80vh;
 }
