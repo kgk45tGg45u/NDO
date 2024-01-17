@@ -411,7 +411,8 @@ letter-spacing: 0.125px;
   font-weight: 700;
   line-height: normal;
   display: flex;
-  width: 705px;
+  max-width: 705px;
+  width: 100%;
   padding: 19px 43px 19px 40px;
   align-items: center;
   background-color: white;
@@ -450,7 +451,8 @@ letter-spacing: 0.125px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
-  width: 705px;
+  max-width: 705px;
+  width: 100%;
   justify-content: center;
   gap: 10px;
 }
@@ -583,7 +585,8 @@ letter-spacing: 0.125px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
-  width: 705px;
+  max-width: 705px;
+  width: 100%;
   padding: 20px 44px;
   justify-content: center;
   align-items: center;
