@@ -30,22 +30,20 @@
     --max-width: 40rem;
 }
 
-#p .xs {
-    font-size: var(--font-xs);
-}
-
 #p .black {
     color: black;
 }
 
 #p h1, #p .h1 {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Kollektif;
     font-size: var(--font-l);
     font-style: normal;
     font-weight: 400;
     line-height: clamp(2.2rem, calc(2.2rem + (3.3 - 2.2) * ((100vw - 19.4rem) / (66.7 - 19.4))), 3.3rem);
     letter-spacing: clamp(-0.1rem, calc(-0.04rem + (-0.1 - -0.04) * ((100vw - 19.4rem) / (66.7 - 19.4))), -0.04rem);
+}
+.hero h1{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #p h2, #p .h2 {
@@ -79,6 +77,15 @@
     font-weight: 400;
 }
 
+#p h4, #p .h4{
+    font-family: Kollektif;
+    font-size: var(--font-big);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: clamp(-0.007rem, calc(0rem + (-0.007 - 0) * ((100vw - 19.4rem) / (66.7 - 19.4))), -0rem);
+
+}
 #p h3, #p .h3 {
     /* H3 */
     font-family: Kollektif;
@@ -134,12 +141,22 @@
     background-color: var(--gray);
 }
 
+#p .btn-gray{
+    background-color: var(--gray);
+    color: black;
+    padding: var(--spc-m) var(--spc-l);
+    &:hover {
+        background-color: #ddd;
+    }
+}
+
 #p .blue {
     color: var(--blue);
 }
 
 #p .center {
     text-align: center;
+    margin: auto;
 }
 
 
@@ -157,7 +174,6 @@
 
 #p .narrow {
     max-width: 44.167rem;
-    margin: auto;
 }
 
 #p .section.wide {
@@ -165,7 +181,7 @@
     clip-path: inset(0 -100vmax);
 }
 
-#p .section.left .section-content {
+#p .section.left .section-content, #p .section .left {
     max-width: 47.611rem;
 }
 
@@ -183,6 +199,10 @@
 
 #p .mbxl {
     margin-bottom: var(--spc-xl);
+}
+
+#p .mbxxl {
+    margin-bottom: var(--spc-xxl);
 }
 
 #p {
@@ -233,15 +253,21 @@
     background-color: #DF0B36;
     color: var(--white);
     padding: var(--spc-m) var(--spc-l);
+    &:hover {
+        background-color: oklch(63.48% 0.2847 21.48);
+
+    }
 }
 
 #p .btn-red.btn-arrow {
     /*padding-right:*/
 }
 
-.ladies {
-    background-image: url("images/ladies.png");
-    background-position: right bottom;
+.bew {
+    @media screen and (min-width: 40rem) {
+        background-image: url("https://neuedeutsche.org/fileadmin/2024/jpeg-optimizer_el.jpg");
+    }
+        background-position: right bottom;
     background-repeat: no-repeat;
 }
 
@@ -266,82 +292,6 @@
     padding: 20px;
 }
 
-@font-face {
-    font-family: 'Kollektif';
-    font-weight: bold;
-    font-style: normal;
-    src: url('/fileadmin/fnt/Kollektif-Bold.woff2') format('woff2'), url('/fileadmin/fnt/Kollektif-Bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Kollektif';
-    font-weight: bold;
-    font-style: italic;
-    src: url('/fileadmin/fnt/Kollektif-BoldItalic.woff2') format('woff2'), url('/fileadmin/fnt/Kollektif-BoldItalic.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Kollektif';
-    font-weight: normal;
-    font-style: normal;
-    src: url('/fileadmin/fnt/Kollektif-Regular.woff2') format('woff2'), url('/fileadmin/fnt/Kollektif-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-regular.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-600.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-600.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: normal;
-    font-weight: 800;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-800.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-800.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: normal;
-    font-weight: 900;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-900.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-900.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-italic.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-italic.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: italic;
-    font-weight: 600;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-600italic.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-600italic.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: italic;
-    font-weight: 700;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-700italic.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-700italic.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Vollkorn';
-    font-style: italic;
-    font-weight: 900;
-    src: url('/fileadmin/fnt/vollkorn-v20-latin-900italic.woff2') format('woff2'), url('/fileadmin/fnt/vollkorn-v20-latin-900italic.woff') format('woff');
-}
 
 .btn-flat {
     margin: 10px 60px;
@@ -366,14 +316,18 @@
 }
 
 
-.accordion {
+#p .accordion {
     max-width: 39rem;
     --arrow-width: clamp(1.2rem, calc(1.2rem + (1.5 - 1.2) * ((100vw - 19.4rem) / (66.7 - 19.4))), 1.5rem);;
     --title-bg: #F0F0F0;
     --title-active-bg: #f8f8f8;
     --content-bg: #F0F0F0;
 
+    p, .accordion-title {
+        color: black !important;
+    }
     .accordion-title {
+        color: black;
         display: flex;
         align-items: center;
         /*width: 100%;*/
@@ -507,7 +461,9 @@ body:has(dialog[open]) {
         * {
             cursor: pointer;
         }
+        box-shadow: 0 0 1px 10px transparent;
 
+        transition: 100ms box-shadow, 100ms background-color;
         &:hover {
             background-color: var(--hover-bg);
             box-shadow: 0 0 1px 10px var(--hover-bg);
@@ -544,121 +500,6 @@ body:has(dialog[open]) {
 }
 
 
-.banner2 {
-    padding: 160px 0px 160px 100px;
-    /* gap: 10px; */
-}
-
-.banner3 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.banner2 h1 {
-    font-family: Kollektif;
-    /* margin: 10px 60px; */
-    color: #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -1.8px;
-    margin-bottom: 40px;
-}
-
-.banner2 h2 {
-    color: #000;
-    font-family: Kollektif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.375px;
-    margin-bottom: 25px;
-}
-
-
-.bannerimg {
-    background-image: url("images/Ellipse-1.png");
-    width: 477px;
-    height: 477px;
-    /* background-size: cover; */
-}
-
-.buttonbanner2 {
-    background-color: #DF0B36;
-    display: inline-flex;
-    padding: 19px 43px 19px 40px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 21px;
-}
-
-.buttonbanner2 p {
-    color: #ffffff;
-    font-family: Kollektif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.375px;
-}
-
-.buttonbanner2 a {
-    color: rgb(255, 255, 255);
-}
-
-.coll-item {
-    color: #000000;
-    font-size: 19px;
-}
-
-/*IMPORTANT*/
-
-.coll-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #F0F0F0;
-    margin-top: 4em;
-    position: relative;
-}
-
-.coll-header-1 {
-    width: 100%;
-    height: 29px;
-    padding: 8px;
-    color: white;
-    cursor: pointer;
-    font-size: 22px;
-}
-
-.coll-content-1 {
-    margin-top: 1px;
-    display: inline-flex;
-    opacity: 0;
-    visibility: hidden;
-    background-color: #F0F0F0;
-    box-shadow: 0px 0px 4px 0px rgba(15, 15, 15, 0.2);
-    flex-direction: column;
-    justify-self: center;
-    align-self: center;
-    color: #000000;
-    font-family: Vollkorn;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 30px */
-    max-width: 705px;
-    width: 100%;
-    padding: 20px 44px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
 
 .hero {
     display: flex;
@@ -677,4 +518,14 @@ body:has(dialog[open]) {
 
 p {
     text-wrap: balance;
+}
+
+.link-list {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, 35ch), 1fr)
+  );
+    grid-gap: 1rem;
+
 }
