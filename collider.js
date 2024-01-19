@@ -12,4 +12,29 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-});
+
+  const cards = document.querySelectorAll('.acard');
+  cards.forEach((c)=>{
+    const d = c.querySelector("dialog");
+    if (!d) return;
+    c.addEventListener("click", () => {
+      d.showModal();
+    });
+
+    d.querySelector('button').addEventListener("click", (event)=>{
+      console.log("CCC")
+      d.close();
+      event.stopImmediatePropagation();
+    });
+    d.addEventListener("click", (event)=> {
+      if (event.target == d)
+        d.close();
+      event.stopImmediatePropagation();
+
+    })
+  })
+
+}
+
+
+);

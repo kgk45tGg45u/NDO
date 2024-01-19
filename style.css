@@ -372,6 +372,7 @@
     --title-bg: #F0F0F0;
     --title-active-bg: #f8f8f8;
     --content-bg: #F0F0F0;
+
     .accordion-title {
         display: flex;
         align-items: center;
@@ -430,8 +431,114 @@
             content: " ";
             display: block;
         }
-        img{
+
+        img {
             max-width: 15rem;
+        }
+    }
+}
+
+#p {
+    dialog {
+        max-width: min(60rem, 90%);
+        display: none;
+        /*position: relative;*/
+
+        * {
+            color: black !important;
+        }
+
+        &[open] {
+            display: block;
+            overscroll-behavior: contain;
+        }
+
+        &::backdrop {
+            opacity: 0.9;
+            background-color: #03A262;
+        }
+    }
+
+    .acard dialog {
+        padding: 0;
+        border: none;
+        .dialog-content {
+            display: grid;
+            grid-gap: 1rem;
+            grid-auto-rows: revert;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 18rem), 1fr)
+                );
+        }
+        .dialog-text {
+            padding: var(--spc-m);
+            overflow: auto;
+            max-height: 100%;
+        }
+    }
+
+    button {
+        width: var(--spc-l);
+        height: var(--spc-l);
+        position: absolute;
+        right: var(--spc-m);
+        top: var(--spc-m);
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 44"><g filter="url(%23a)"><path fill="%23000" fill-rule="evenodd" d="m21.8 22.7 13.5 13.6.7-.8L22.5 22 36 8.5l-.7-.8-13.5 13.6-14-14L7 8l14 14L7 36l.7.7 14-14Z" clip-rule="evenodd"/></g><defs><filter id="a" width="43" height="43.5" x="0" y=".3" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feGaussianBlur stdDeviation="3.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_401_1026"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_401_1026" result="shape"/></filter></defs></svg>')
+    }
+}
+
+body:has(dialog[open]) {
+    /*overflow: hidden;*/
+}
+
+.cards {
+    --hover-bg: rgba(255, 255, 255, 0.15);
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(min(100%, 17.3rem), 1fr)
+    );
+    grid-gap: var(--spc-l);
+
+    .acard {
+        max-width: 17rem;
+
+        * {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: var(--hover-bg);
+            box-shadow: 0 0 1px 10px var(--hover-bg);
+        }
+    }
+
+    .card-title {
+        display: flex;
+        align-items: center;
+        /*width: 100%;*/
+        justify-content: space-between;
+        cursor: pointer;
+        gap: var(--spc-l);
+        padding: var(--spc-m) var(--spc-m) 0 0;
+        margin: 0;
+
+        &:after {
+            padding-left: var(--spc-m);
+            display: inline-block;
+            content: " ";
+            height: auto;
+            width: var(--arrow-width);
+            flex-shrink: 0;
+            aspect-ratio: 1;
+            color: red;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21"><path fill="white" fill-rule="evenodd" d="M9.7 11.2v9.4h1v-9.4H20v-1h-9.3V.6h-1v9.6H0v1h9.7Z" clip-rule="evenodd"/></svg>');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition: transform 0.5s ease-out;
+
         }
     }
 }
