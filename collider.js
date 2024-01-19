@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const accordion_titles = document.querySelectorAll('.frame11 .dropdowna');
+  const accordion_titles = document.querySelectorAll('.accordion .accordion-title');
 
   accordion_titles.forEach((at) => {
     at.addEventListener("click", ()=>{
