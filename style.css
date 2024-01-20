@@ -424,6 +424,8 @@
                 auto-fit,
                 minmax(min(100%, 18rem), 1fr)
                 );
+            max-height: 100%;
+
         }
         .dialog-text {
             padding: var(--spc-m);
