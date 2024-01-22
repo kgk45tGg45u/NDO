@@ -28,13 +28,6 @@
     font-smooth: never;
 
     --max-width: 40rem;
-
-
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
 }
 
 #p .black {
@@ -65,22 +58,21 @@ html {
 }
 
 
-#p .section.white-bg h2 {
-    color: var(--red);
+#p .section.white-bg {
+    h2 {
+        color: var(--red);
+    }
 }
 
-#p .section.green-bg h2,
-#p .section.green-bg b {
-    color: var(--blue);
-}
+#p .section.green-bg {
+    h2, b {
+        color: var(--blue);
+    }
 
-#p .section.green-bg p,
-#p .section.green-bg h3,
-#p .section.green-bg h4,
-#p .section.green-bg svg {
-    color: var(--white);
+    p, h3, h4, cvg {
+        color: var(--white);
+    }
 }
-
 
 #p h2.light #p .h2.light {
     font-weight: 400;
@@ -155,10 +147,10 @@ html {
     background-color: var(--gray);
     color: black;
     padding: var(--spc-m) var(--spc-l);
-}
 
-#p .btn-gray &:hover {
-    background-color: #ddd;
+    &:hover {
+        background-color: #ddd;
+    }
 }
 
 #p .blue {
@@ -216,20 +208,22 @@ html {
     margin-bottom: var(--spc-xxl);
 }
 
-#p .ptxxl {
-    padding-top: var(--spc-xxl);
-}
+#p {
+    .ptxxl {
+        padding-top: var(--spc-xxl);
+    }
 
-#p .ptxl {
-    padding-top: var(--spc-xl);
-}
+    .ptxl {
+        padding-top: var(--spc-xl);
+    }
 
-#p .pbxl {
-    padding-bottom: var(--spc-xl);
-}
+    .pbxl {
+        padding-bottom: var(--spc-xl);
+    }
 
-#p .pll {
-    padding-left: var(--spc-l);
+    .pll {
+        padding-left: var(--spc-l);
+    }
 }
 
 #p [class^="btn-"] {
@@ -251,8 +245,7 @@ html {
     background-color: var(--blue);
 }
 
-#p .btn-arrow,
-#p .btn-red.btn-arrow {
+#p .btn-arrow, #p .btn-red.btn-arrow {
     background-image: url("data:image/svg+xml,%3Csvg width='44' height='30' viewBox='0 0 44 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 27.1104L41 15.0701M41 15.0701L29 3.11035M41 15.0701L2 15.0701' stroke='white' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat no-repeat;
     background-position: calc(100% - var(--spc-l)) center;
@@ -263,24 +256,21 @@ html {
     background-color: #DF0B36;
     color: var(--white);
     padding: var(--spc-m) var(--spc-l);
-}
 
-#p .btn-red:hover {
-    background-color: oklch(63.48% 0.2847 21.48);
+    &:hover {
+        background-color: oklch(63.48% 0.2847 21.48);
 
+    }
 }
 
 #p .btn-red.btn-arrow {
     /*padding-right:*/
 }
 
-@media screen and (min-width: 40rem) {
-    .bew {
+.bew {
+    @media screen and (min-width: 40rem) {
         background-image: url("https://neuedeutsche.org/fileadmin/2024/jpeg-optimizer_el.jpg");
     }
-}
-
-.bew {
     background-position: right bottom;
     background-repeat: no-repeat;
 }
@@ -329,6 +319,7 @@ html {
     margin-right: calc(50% - 50vw);
 }
 
+
 #p .accordion {
     max-width: 39rem;
     --arrow-width: clamp(1.2rem, calc(1.2rem + (1.5 - 1.2) * ((100vw - 19.4rem) / (66.7 - 19.4))), 1.5rem);;
@@ -350,7 +341,7 @@ html {
     cursor: pointer;
     gap: var(--spc-l);
     text-wrap: balance;
-    transition: 0.1s background-color;
+    transition: 0.4s background-color;
     padding: var(--spc-m) var(--spc-l);
     margin: 0;
     background-color: var(--title-bg);
@@ -373,14 +364,14 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    transition: transform 0.4s ease-out;
+    transition: transform 0.5s ease-out;
 }
 
-#p .accordion.accordion-is-open .accordion-title {
+#p .accordion.accordion-is-open.accordion-title {
     background-color: var(--title-active-bg);
 }
 
-#p .accordion.accordion-is-open .accordion-title:after {
+#p .accordion.accordion-is-open.accordion-title:after {
     transform: rotate(180deg);
 }
 
@@ -438,6 +429,8 @@ html {
                 auto-fit,
                 minmax(min(100%, 18rem), 1fr)
                 );
+    max-height: 100%;
+
 }
 
 #p .acard dialog .dialog-text {
@@ -519,7 +512,7 @@ html {
 }
 
 .hero .plogo {
-    max-width: calc(1.2*var(--spc-xxxl));
+    max-width: var(--spc-xxxl);
     position: absolute;
     top: var(--spc-l);
     right: var(--spc-l);

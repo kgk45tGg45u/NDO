@@ -22,11 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (d.scrollWidth > 648) {
           const img = d.querySelector('img');
           d.querySelector('.dialog-text').style.height = img.scrollHeight + "px";
+          console.log(img, img.height, img.scrollHeight);
+          // d.style.height = img.height + "px";
         }
       });
 
       d.querySelector('button').addEventListener("click", (event) => {
-        console.log("CCC")
         d.close();
         event.stopImmediatePropagation();
       });
