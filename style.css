@@ -28,6 +28,7 @@
     font-smooth: never;
 
     --max-width: 40rem;
+    --arrow-width: clamp(1.2rem, calc(1.2rem + (1.5 - 1.2) * ((100vw - 19.4rem) / (66.7 - 19.4))), 1.5rem);;
 
 
 }
@@ -180,7 +181,8 @@ html {
 }
 
 #p .section {
-    padding-block: var(--spc-xxl);
+    padding-top: var(--spc-xxl);
+    padding-bottom: var(--spc-xxl);
 }
 
 #p .narrow {
@@ -278,8 +280,10 @@ html {
     .bew {
         background-image: url("https://neuedeutsche.org/fileadmin/2024/jpeg-optimizer_el.jpg");
     }
+    .bew .section-content {
+        max-width: calc(100% - 400px) !important;
+    }
 }
-
 .bew {
     background-position: right bottom;
     background-repeat: no-repeat;
@@ -331,7 +335,6 @@ html {
 
 #p .accordion {
     max-width: 39rem;
-    --arrow-width: clamp(1.2rem, calc(1.2rem + (1.5 - 1.2) * ((100vw - 19.4rem) / (66.7 - 19.4))), 1.5rem);;
     --title-bg: #F0F0F0;
     --title-active-bg: #f8f8f8;
     --content-bg: #F0F0F0;
@@ -349,7 +352,7 @@ html {
     justify-content: space-between;
     cursor: pointer;
     gap: var(--spc-l);
-    text-wrap: balance;
+    /*text-wrap: balance;*/
     transition: 0.1s background-color;
     padding: var(--spc-m) var(--spc-l);
     margin: 0;
@@ -364,10 +367,9 @@ html {
     padding-left: var(--spc-m);
     display: inline-block;
     content: " ";
-    height: auto;
+    height: calc(var(--arrow-width) / 1.66);
     width: var(--arrow-width);
     flex-shrink: 0;
-    aspect-ratio: 5/3;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 19"><path stroke="%23000" stroke-linecap="square" stroke-width="4" d="M3.7 3 14 15 24 3"/></svg>');
 
     background-repeat: no-repeat;
@@ -387,7 +389,8 @@ html {
 
 #p .accordion .accordion-content {
     background-color: var(--content-bg);
-    padding-inline: var(--spc-l);
+    padding-right: var(--spc-l);
+    padding-left: var(--spc-l);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -498,10 +501,9 @@ html {
     padding-left: var(--spc-m);
     display: inline-block;
     content: " ";
-    height: auto;
+    height: var(--arrow-width);
     width: var(--arrow-width);
     flex-shrink: 0;
-    aspect-ratio: 1;
     color: red;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21"><path fill="white" fill-rule="evenodd" d="M9.7 11.2v9.4h1v-9.4H20v-1h-9.3V.6h-1v9.6H0v1h9.7Z" clip-rule="evenodd"/></svg>');
     background-repeat: no-repeat;
@@ -527,7 +529,10 @@ html {
 }
 
 p {
-    text-wrap: balance;
+    /*text-wrap: balance;*/
+}
+*{
+    min-height: 0vw;
 }
 
 .link-list {

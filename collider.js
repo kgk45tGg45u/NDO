@@ -41,3 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 );
+
+
+// Function to detect Safari and check its version
+function isOldSafari() {
+  var userAgent = navigator.userAgent.toLowerCase();
+  if (userAgent.indexOf('safari') !== -1) {
+    var version = parseInt((/version\/(\d+)/.exec(userAgent) || [])[1]);
+    return version <= 14;
+  }
+  return false;
+}
+
+// Function to display a message if Safari version is too old
+function displayMessage() {
+  var isOld = isOldSafari();
+  if (isOld) {
+    var message = "Ihr Browser ist zu alt und wird nicht vollständig unterstützt. Bitte verwenden Sie eine neuere Safari-Version oder wechseln Sie zu Chrome oder Firefox.";
+    alert(message);
+  }
+}
+displayMessage();
